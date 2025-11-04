@@ -1,0 +1,1336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infographic: The Blueprint of Research Design</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FEFBF3; 
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+        .flowchart-step {
+            position: relative;
+            padding: 1.5rem;
+            border-width: 2px;
+            border-radius: 0.5rem;
+            background-color: white;
+            text-align: center;
+        }
+        .flowchart-connector {
+            display: none; 
+        }
+        @media (min-width: 768px) {
+            .flowchart-connector {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 2rem;
+                color: #0A9396;
+            }
+        }
+        .flowchart-grid {
+            grid-template-columns: 1fr;
+        }
+        @media (min-width: 768px) {
+           .flowchart-grid {
+             grid-template-columns: repeat(5, minmax(0, 1fr));
+           }
+        }
+    </style>
+
+
+</head>
+<body class="text-[#001219]">
+    <main class="container mx-auto p-4 md:p-8">
+        
+        <header class="text-center my-8 md:my-12">
+            <h1 class="text-4xl md:text-6xl font-black text-[#005f73] uppercase tracking-wide">The Blueprint of Research</h1>
+            <p class="text-lg md:text-xl text-[#0a9396] mt-2">A Visual Guide to Understanding Research Design</p>
+        </header>
+        
+        <section id="introduction" class="mb-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="bg-white rounded-lg shadow-lg p-6 md:p-8">
+                    <h2 class="text-2xl font-bold text-[#005f73] mb-4">What is a Research Design?</h2>
+                    <p class="text-base leading-relaxed">
+                        A research design is the comprehensive framework that dictates the entire flow of a research study. It serves as a strategic blueprint, providing a detailed plan of action before any data is collected. Its primary purpose is to structure the research process in a way that effectively addresses the central research questions and hypotheses logically and coherently. A well-crafted design maximizes the reliability and validity of the findings by ensuring the data collected is relevant and the analysis is objective, making it the essential bridge from question to conclusion.
+                    </p>
+                </div>
+                <div class="bg-[#005f73] text-white rounded-lg shadow-lg p-6 md:p-8">
+                     <h3 class="text-xl font-bold text-[#94d2bd] mb-4">Expert Perspectives</h3>
+                     <blockquote class="border-l-4 border-[#ee9b00] pl-4 mb-4 italic">
+                        <p>"A plan, structure and strategy of investigation... to obtain answers to research questions or problems."</p>
+                        <cite class="text-sm text-[#94d2bd] not-italic block mt-1">- Kerlinger, 1986</cite>
+                     </blockquote>
+                     <blockquote class="border-l-4 border-[#ee9b00] pl-4 italic">
+                        <p>"A master plan specifying methods and procedures of data collection and its analysis."</p>
+                        <cite class="text-sm text-[#94d2bd] not-italic block mt-1">- William Zikmund</cite>
+                     </blockquote>
+                </div>
+            </div>
+        </section>
+
+        <section id="key-questions" class="mb-12">
+             <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-[#005f73]">The 10 Core Questions a Research Design Answers</h2>
+                <p class="text-md text-[#0a9396] mt-1">Every robust design provides clear answers to these fundamental inquiries.</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6">
+                <div class="bg-white rounded-lg shadow-md p-4 text-center aspect-square flex flex-col justify-center items-center"><span class="text-4xl mb-2">❓</span><span class="font-semibold text-[#005f73]">What is the study about?</span></div>
+                <div class="bg-white rounded-lg shadow-md p-4 text-center aspect-square flex flex-col justify-center items-center"><span class="text-4xl mb-2">🤔</span><span class="font-semibold text-[#005f73]">Why is it being done?</span></div>
+                <div class="bg-white rounded-lg shadow-md p-4 text-center aspect-square flex flex-col justify-center items-center"><span class="text-4xl mb-2">🗺️</span><span class="font-semibold text-[#005f73]">Where will it be held?</span></div>
+                <div class="bg-white rounded-lg shadow-md p-4 text-center aspect-square flex flex-col justify-center items-center"><span class="text-4xl mb-2">📈</span><span class="font-semibold text-[#005f73]">What data is needed?</span></div>
+                <div class="bg-white rounded-lg shadow-md p-4 text-center aspect-square flex flex-col justify-center items-center"><span class="text-4xl mb-2">🔍</span><span class="font-semibold text-[#005f73]">Where to find the data?</span></div>
+                <div class="bg-white rounded-lg shadow-md p-4 text-center aspect-square flex flex-col justify-center items-center"><span class="text-4xl mb-2">⏳</span><span class="font-semibold text-[#005f73]">What is the time frame?</span></div>
+                <div class="bg-white rounded-lg shadow-md p-4 text-center aspect-square flex flex-col justify-center items-center"><span class="text-4xl mb-2">👥</span><span class="font-semibold text-[#005f73]">What is the sample design?</span></div>
+                <div class="bg-white rounded-lg shadow-md p-4 text-center aspect-square flex flex-col justify-center items-center"><span class="text-4xl mb-2">✍️</span><span class="font-semibold text-[#005f73]">Which collection techniques?</span></div>
+                <div class="bg-white rounded-lg shadow-md p-4 text-center aspect-square flex flex-col justify-center items-center"><span class="text-4xl mb-2">📊</span><span class="font-semibold text-[#005f73]">How will data be analyzed?</span></div>
+                <div class="bg-white rounded-lg shadow-md p-4 text-center aspect-square flex flex-col justify-center items-center"><span class="text-4xl mb-2">📝</span><span class="font-semibold text-[#005f73]">In what style is the report?</span></div>
+            </div>
+        </section>
+        
+        <section id="process-flow" class="mb-12">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-[#005f73]">Research Design Steps and Options</h2>
+                <p class="text-md text-[#0a9396] mt-1">A detailed breakdown of the decisions required to build a comprehensive research plan.</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left">
+                        <thead class="bg-[#005f73] text-white">
+                            <tr>
+                                <th class="p-4 font-semibold">Step</th>
+                                <th class="p-4 font-semibold">Options & Definitions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b border-gray-200">
+                                <td class="p-4 align-top font-semibold text-[#005f73]">Determine Study's Primary Goal</td>
+                                <td class="p-4">
+                                    <ul class="list-disc pl-5 space-y-1">
+                                        <li><b>Understand a real-world problem:</b> Investigate a practical issue to find insights.</li>
+                                        <li><b>Develop knowledge/theory:</b> Contribute new concepts or frameworks to a field.</li>
+                                        <li><b>Create an intervention/program:</b> Design and build a new solution or program.</li>
+                                        <li><b>Evaluate something:</b> Assess the effectiveness or impact of an existing program or policy.</li>
+                                        <li><b>Contribute to a larger study:</b> Provide a specific component for a broader research project.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr class="bg-gray-50 border-b border-gray-200">
+                                <td class="p-4 align-top font-semibold text-[#005f73]">Decide the study's primary audience.</td>
+                                <td class="p-4">
+                                    <ul class="list-disc pl-5 space-y-1">
+                                        <li><b>Clients, Stakeholders, Dissertation Committee:</b> Practical audiences who need actionable results.</li>
+                                        <li><b>Scholars, Researchers, Academicians, Funders:</b> Academic audiences focused on theoretical and methodological rigor.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-gray-200">
+                                <td class="p-4 align-top font-semibold text-[#005f73]">Define Study Population(s) and Geographic Parameters</td>
+                                <td class="p-4">
+                                    <ul class="list-disc pl-5 space-y-1">
+                                        <li><b>Number of Sites:</b> The quantity and location of places where the research will be conducted.</li>
+                                        <li><b>Study Population(s) Boundaries and Eligibility Criteria:</b> Who will be included or excluded from the study.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr class="bg-gray-50 border-b border-gray-200">
+                                <td class="p-4 align-top font-semibold text-[#005f73]">Decide if and What Comparative Elements to Include</td>
+                                <td class="p-4">
+                                    <ul class="list-disc pl-5 space-y-1">
+                                        <li><b>Between Groups Comparison:</b> Comparing two or more different groups (e.g., treatment vs. control).</li>
+                                        <li><b>Within Groups Comparison:</b> Comparing a single group at different points in time (e.g., pre-test vs. post-test).</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-gray-200">
+                                <td class="p-4 align-top font-semibold text-[#005f73]">Determine Temporal Orientation of Design</td>
+                                <td class="p-4">
+                                    <p class="mb-2">Deciding on the timeline of data collection, with emphasis on past, present, or future.</p>
+                                    <ul class="list-disc pl-5 space-y-1">
+                                        <li><b>Cross-Sectional:</b> Data collected at one single point in time.</li>
+                                        <li><b>Longitudinal:</b> Data collected from the same subjects repeatedly over a period of time.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr class="bg-gray-50 border-b border-gray-200">
+                                <td class="p-4 align-top font-semibold text-[#005f73]">Choose Your Research Objective Verb(s)</td>
+                                <td class="p-4">
+                                    <ul class="list-disc pl-5 space-y-1">
+                                        <li><b>Identify, Explore, Describe, Explain, Evaluate:</b> These verbs define the purpose and scope of the inquiry.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-gray-200">
+                                <td class="p-4 align-top font-semibold text-[#005f73]">Choose Your Qualitative Approach(es)</td>
+                                <td class="p-4">
+                                    <ul class="list-disc pl-5 space-y-1">
+                                        <li><b>Phenomenology:</b> Understanding the lived experiences of individuals.</li>
+                                        <li><b>Ethnography:</b> Studying culture and social groups in their natural setting.</li>
+                                        <li><b>Grounded Theory:</b> Developing theory from data that is systematically gathered and analyzed.</li>
+                                        <li><b>Case Study:</b> An in-depth investigation of a single individual, group, or event.</li>
+                                        <li><b>Narrative Analysis:</b> Studying stories and personal accounts to understand experiences.</li>
+                                        <li><b>Mixed Methods:</b> Combining qualitative and quantitative approaches.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr class="bg-gray-50 border-b border-gray-200">
+                                <td class="p-4 align-top font-semibold text-[#005f73]">Select Attribute(s) of Human Experience to Examine</td>
+                                <td class="p-4">
+                                    <p class="mb-2">Focusing on specific facets of human experience for each population in the study.</p>
+                                    <ul class="list-disc pl-5 space-y-1">
+                                        <li>Behavior & Actions</li>
+                                        <li>Attitudes, Opinions, & Perceptions</li>
+                                        <li>Values & Emotions</li>
+                                        <li>Knowledge & Understanding</li>
+                                        <li>Culturally Shared Meanings</li>
+                                        <li>Social Structures & Relationships</li>
+                                        <li>Processes & Systems</li>
+                                        <li>Environmental Context</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-gray-200">
+                                <td class="p-4 align-top font-semibold text-[#005f73]">Select Data Collection Methods</td>
+                                <td class="p-4">
+                                     <p class="mb-2">Choosing the primary tools for gathering information for each population.</p>
+                                    <ul class="list-disc pl-5 space-y-1">
+                                        <li><b>Participant Observation:</b> The researcher becomes part of the group they are studying.</li>
+                                        <li><b>In-Depth Interviews:</b> One-on-one conversations to explore topics in detail.</li>
+                                        <li><b>Focus Groups:</b> Group discussions to gather diverse perspectives on a topic.</li>
+                                        <li><b>Document Analysis:</b> Examining existing documents to extract relevant information.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                             <tr class="bg-gray-50 border-b border-gray-200">
+                                <td class="p-4 align-top font-semibold text-[#005f73]">Determine If/How Additional Activities Will Inform Study</td>
+                                <td class="p-4">
+                                    <p class="mb-2">Incorporating supplementary procedures to enrich the data.</p>
+                                    <ul class="list-disc pl-5 space-y-1 grid grid-cols-1 sm:grid-cols-2">
+                                        <li>Listing & Categorizing</li>
+                                        <li>Timelines & Drawing/Mapping</li>
+                                        <li>Visual Elicitation (projective)</li>
+                                        <li>Rating & Ranking</li>
+                                        <li>Post-Event Reflection</li>
+                                        <li>Collages</li>
+                                        <li>Building a Campaign</li>
+                                        <li>Ethnographic Decision Modeling</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section id="what-is-design" class="mb-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+                <div class="bg-white rounded-lg shadow-lg p-6 md:p-8">
+                    <h2 class="text-2xl font-bold text-[#005f73] mb-4">So, what is Design?</h2>
+                    <p class="text-base leading-relaxed mb-4">It is a <strong class="text-[#005f73]">strategy plan</strong> for answering your research question using empirical data. It acts as a structure or framework that a researcher develops to achieve research objectives and test hypotheses.</p>
+                    <p class="text-base leading-relaxed">It is essential for the researcher at the very outset to think and work out the details of the process of carrying out the research.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6 md:p-8">
+                     <h2 class="text-2xl font-bold text-[#005f73] mb-4">It Helps the Researcher to Plan</h2>
+                     <ul class="space-y-3">
+                        <li class="flex items-start"><span class="text-xl text-[#ee9b00] mr-3">🎯</span><span><b>Research objectives and approach:</b> Defining what you want to achieve and how you'll do it.</span></li>
+                        <li class="flex items-start"><span class="text-xl text-[#ee9b00] mr-3">📚</span><span><b>Sources of data:</b> Identifying where to find the necessary information.</span></li>
+                        <li class="flex items-start"><span class="text-xl text-[#ee9b00] mr-3">👥</span><span><b>Population and Sampling:</b> Determining who to study and how to select them.</span></li>
+                        <li class="flex items-start"><span class="text-xl text-[#ee9b00] mr-3">🛠️</span><span><b>Tools and techniques:</b> Choosing the right methods to collect data.</span></li>
+                        <li class="flex items-start"><span class="text-xl text-[#ee9b00] mr-3">⚙️</span><span><b>Data collection process:</b> Outlining the step-by-step procedure for gathering data.</span></li>
+                        <li class="flex items-start"><span class="text-xl text-[#ee9b00] mr-3">📊</span><span><b>Data analysis methods:</b> Deciding how the collected data will be interpreted.</span></li>
+                     </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="need-for-design" class="mb-12">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-[#005f73]">The Need for a Research Design</h2>
+                <p class="text-md text-[#0a9396] mt-1">A proper design is crucial for the success and efficiency of any research study.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-[#005f73] text-white rounded-lg shadow-md p-6 text-center flex flex-col justify-center">
+                    <h3 class="font-bold text-lg mb-2 text-[#94d2bd]">Smooth Operations</h3>
+                    <p class="text-sm">To facilitate the smooth sailing of the various research operations.</p>
+                </div>
+                <div class="bg-[#0a9396] text-white rounded-lg shadow-md p-6 text-center flex flex-col justify-center">
+                    <h3 class="font-bold text-lg mb-2 text-[#94d2bd]">Maximum Efficiency</h3>
+                    <p class="text-sm">To yield maximal information with minimal expenditure of effort, time and money.</p>
+                </div>
+                 <div class="bg-[#ee9b00] text-white rounded-lg shadow-md p-6 text-center flex flex-col justify-center">
+                    <h3 class="font-bold text-lg mb-2 text-white">Advance Planning</h3>
+                    <p class="text-sm">For advance planning of data collection methods and techniques.</p>
+                </div>
+                 <div class="bg-[#ca6702] text-white rounded-lg shadow-md p-6 text-center flex flex-col justify-center">
+                    <h3 class="font-bold text-lg mb-2 text-white">Focused Searching</h3>
+                    <p class="text-sm">To prevent blind searching, which can help in effective decision making.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="features-of-good-design" class="mb-12">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-[#005f73]">Features of a Good Research Design</h2>
+                <p class="text-md text-[#0a9396] mt-1">A quality design is characterized by several key features.</p>
+            </div>
+             <div class="bg-white rounded-lg shadow-lg p-6 md:p-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
+                    <div>
+                        <h3 class="text-xl font-bold text-[#005f73] mb-3">Core Features</h3>
+                        <ul class="list-disc pl-5 space-y-2">
+                           <li><b>Objectivity:</b> The design should be free from bias.</li>
+                           <li><b>Reliability:</b> The results should be repeatable and consistent.</li>
+                           <li><b>Validity:</b> The design must measure what it intends to measure.</li>
+                           <li><b>Generalizability:</b> The findings should be applicable to a larger population.</li>
+                           <li><b>Sufficient Data:</b> The plan must allow for the collection of adequate data to support conclusions.</li>
+                        </ul>
+                    </div>
+                     <div>
+                        <h3 class="text-xl font-bold text-[#005f73] mb-3">Other Important Features</h3>
+                        <ul class="list-disc pl-5 space-y-2">
+                           <li><b>Adaptability & Flexibility:</b> The ability to adjust to unforeseen circumstances during research.</li>
+                           <li><b>Efficiency:</b> Achieving the research objectives economically.</li>
+                           <li><b>Accuracy:</b> The design should minimize error and maximize the accuracy of the data.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="minimum-essentials" class="mb-12">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-[#005f73]">Minimum Essentials of a Research Design</h2>
+                <p class="text-md text-[#0a9396] mt-1">The absolute core components every research plan must include.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-bold text-[#005f73] mb-3 flex items-center"><span class="text-2xl mr-2">🎯</span>Clear Statement of the Problem</h3>
+                    <ul class="list-disc pl-5 space-y-2 text-sm">
+                        <li>To Identify, Explore, describe, explain, evaluate, and understand a real-world problem related to human attitude, behavior, opinion, perception, values, emotions, Knowledge, social structure and relationships, culturally shared meaning, environmental contexts, processes and systems.</li>
+                        <li>To develop knowledge and theory</li>
+                        <li>To create an intervention program</li>
+                        <li>To contribute to a larger study</li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-bold text-[#005f73] mb-3 flex items-center"><span class="text-2xl mr-2">🧭</span>The Population to be Studied</h3>
+                    <ul class="list-disc pl-5 space-y-2 text-sm">
+                        <li><b>Eligibility criteria:</b> Defining who qualifies for the study.</li>
+                        <li><b>Audience/Stakeholders:</b> Clients, Stakeholders, Dissertation committee, Scholars, Researchers, academicians, Funders.</li>
+                        <li><b>Number of sites:</b> Specifying the locations for the research.</li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-bold text-[#005f73] mb-3 flex items-center"><span class="text-2xl mr-2">🛠️</span>Techniques, Approach & Sampling</h3>
+                    <p class="text-sm font-semibold text-[#0a9396] mb-1">Approach to Gathering Information:</p>
+                    <ul class="list-disc pl-5 space-y-1 text-sm mb-3">
+                        <li><b>Quantitative:</b> Cross-sectional, correlational, longitudinal</li>
+                        <li><b>Qualitative:</b> Phenomenology, Ethnography, Grounded theory, Case study, Narrative analysis</li>
+                        <li><b>Mixed method:</b> Convergent Parallel, Explanatory Sequential, Exploratory Sequential, Embedded, Transformative, Multiphase Design</li>
+                    </ul>
+                     <p class="text-sm font-semibold text-[#0a9396] mb-1">Sampling Technique:</p>
+                    <ul class="list-disc pl-5 space-y-1 text-sm">
+                        <li>Census, snowball, Purposive, Quota, Convenience, Random, systematic.</li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-bold text-[#005f73] mb-3 flex items-center"><span class="text-2xl mr-2">📊</span>Data Collection & Analysis</h3>
+                    <p class="text-sm font-semibold text-[#0a9396] mb-1">Data Collection Methods:</p>
+                    <ul class="list-disc pl-5 space-y-1 text-sm mb-3">
+                        <li>Self-report inventories</li>
+                        <li>Participant observation</li>
+                        <li>In-depth interviews</li>
+                        <li>Focus group discussion</li>
+                    </ul>
+                    <p class="text-sm font-semibold text-[#0a9396] mb-1">Methods for Processing & Analysing Data:</p>
+                    <ul class="list-disc pl-5 space-y-1 text-sm">
+                        <li>Between groups comparison</li>
+                        <li>Within groups comparison</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="types-of-design" class="mb-12">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-[#005f73]">Types of Research Designs</h2>
+                <p class="text-md text-[#0a9396] mt-1">Choosing the right design depends on the purpose and scope of your study.</p>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg p-6 md:p-8 mb-8">
+                <p class="mb-6 text-base leading-relaxed">There are different types of research design. Which one is the best for your study depends on its purpose and scope. When deciding on a research design, a number of factors must be taken into consideration, including:</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-[#005f73]">
+                        <h3 class="font-bold text-[#005f73] mb-2">Nature of Investigation</h3>
+                        <ul class="list-disc pl-5 text-sm space-y-1">
+                            <li>Exploratory</li>
+                            <li>Descriptive</li>
+                            <li>Experimental</li>
+                            <li>Quasi-Experimental</li>
+                            <li>Non-Experimental</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-[#0a9396]">
+                        <h3 class="font-bold text-[#005f73] mb-2">Data Collection Methods</h3>
+                         <ul class="list-disc pl-5 text-sm space-y-1">
+                            <li>Field Research</li>
+                            <li>Survey</li>
+                            <li>Case Studies</li>
+                            <li>Content Analysis</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-[#ee9b00]">
+                        <h3 class="font-bold text-[#005f73] mb-2">Number of Contacts</h3>
+                        <ul class="list-disc pl-5 text-sm space-y-1">
+                            <li>Cross-sectional</li>
+                            <li>Before-and-After</li>
+                            <li>Longitudinal</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-[#ca6702]">
+                        <h3 class="font-bold text-[#005f73] mb-2">Reference Period</h3>
+                        <ul class="list-disc pl-5 text-sm space-y-1">
+                            <li>Retrospective</li>
+                            <li>Prospective</li>
+                            <li>Retrospective-Prospective</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <div class="bg-white rounded-lg shadow-lg p-6 md:p-8">
+                    <h3 class="text-2xl font-bold text-[#005f73] mb-4">1. Quantitative Designs</h3>
+                    <ul class="list-none space-y-2">
+                        <li><span class="font-bold text-[#005f73]">A.</span> Experimental & Quasi-experimental</li>
+                        <li><span class="font-bold text-[#005f73]">B.</span> Descriptive & Correlational</li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6 md:p-8">
+                    <h3 class="text-2xl font-bold text-[#005f73] mb-4">2. Qualitative Designs</h3>
+                    <ul class="list-none space-y-2">
+                        <li><span class="font-bold text-[#005f73]">C.</span> Case study</li>
+                        <li><span class="font-bold text-[#005f73]">D.</span> Ethnography</li>
+                        <li><span class="font-bold text-[#005f73]">E.</span> Grounded theory</li>
+                        <li><span class="font-bold text-[#005f73]">F.</span> Phenomenology</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mb-12">
+                 <h3 class="text-2xl font-bold text-[#005f73] mb-4 text-center">Quantitative Designs & Their Purpose</h3>
+                 <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left">
+                            <thead class="bg-[#005f73] text-white">
+                                <tr><th class="p-4 font-semibold">Type of Design</th><th class="p-4 font-semibold">Purpose and Characteristics</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b border-gray-200">
+                                    <td class="p-4 align-top font-semibold text-[#005f73]">Experimental</td>
+                                    <td class="p-4"><ul class="list-disc pl-5 space-y-1"><li>Used to test causal relationships.</li><li>Involves manipulating independent variables and measuring the effect on dependent variables.</li><li>Subjects are randomly assigned to groups.</li><li>Usually conducted in a controlled environment (e.g., lab).</li></ul></td>
+                                </tr>
+                                <tr class="bg-gray-50 border-b border-gray-200">
+                                     <td class="p-4 align-top font-semibold text-[#005f73]">Quasi-experimental</td>
+                                     <td class="p-4"><ul class="list-disc pl-5 space-y-1"><li>Used to test causal relationships.</li><li>Similar to experimental design, but without random assignment.</li><li>Involves the comparison of the outcomes of pre-existing groups.</li><li>Often conducted in a natural environment.</li></ul></td>
+                                </tr>
+                                <tr class="border-b border-gray-200">
+                                     <td class="p-4 align-top font-semibold text-[#005f73]">Correlational</td>
+                                     <td class="p-4"><ul class="list-disc pl-5 space-y-1"><li>Used to test whether variables are related.</li><li>Variables are measured without influencing them.</li></ul></td>
+                                </tr>
+                                <tr class="bg-gray-50">
+                                     <td class="p-4 align-top font-semibold text-[#005f73]">Descriptive</td>
+                                     <td class="p-4"><ul class="list-disc pl-5 space-y-1"><li>Used to describe characteristics, averages, trends, etc.</li><li>Variables are measured without influencing them.</li></ul></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                 </div>
+            </div>
+
+            <div>
+                 <h3 class="text-2xl font-bold text-[#005f73] mb-4 text-center">Qualitative Designs & Their Purpose</h3>
+                 <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left">
+                             <thead class="bg-[#005f73] text-white">
+                                <tr><th class="p-4 font-semibold">Type of Design</th><th class="p-4 font-semibold">Purpose and Characteristics</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b border-gray-200">
+                                    <td class="p-4 align-top font-semibold text-[#005f73]">Case Study</td>
+                                    <td class="p-4"><ol class="list-decimal pl-5 space-y-1"><li>Detailed study of a specific subject (a place, a person, an organization, etc.).</li><li>Data can be collected using a variety of methods and sources.</li><li>Focuses on gaining a holistic and in-depth understanding of a case.</li></ol></td>
+                                </tr>
+                                <tr class="bg-gray-50 border-b border-gray-200">
+                                    <td class="p-4 align-top font-semibold text-[#005f73]">Ethnography</td>
+                                    <td class="p-4"><ol class="list-decimal pl-5 space-y-1"><li>Detailed study of the culture of a specific community or group.</li><li>Data is collected by extended immersion and close observations.</li><li>Focuses on describing and interpreting beliefs, conventions, social dynamics, etc.</li></ol></td>
+                                </tr>
+                                <tr class="border-b border-gray-200">
+                                     <td class="p-4 align-top font-semibold text-[#005f73]">Grounded Theory</td>
+                                     <td class="p-4">Aims to develop a theory inductively by systematically analyzing qualitative data.</td>
+                                </tr>
+                                <tr class="bg-gray-50">
+                                     <td class="p-4 align-top font-semibold text-[#005f73]">Phenomenology</td>
+                                     <td class="p-4">Aims to understand a phenomenon or event by describing participants’ lived experiences.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                 </div>
+            </div>
+        </section>
+
+        <section id="experimental-design" class="mb-12">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-[#005f73]">What is Experimental Research Design?</h2>
+                <p class="text-md text-[#0a9396] mt-1">The gold standard for establishing causal relationships.</p>
+            </div>
+        
+            <div class="bg-white rounded-lg shadow-lg p-6 md:p-8 mb-8">
+                 <p class="text-base leading-relaxed mb-4">The experimental design is a scientific method where a researcher manipulates one or more independent variables and applies them to one or more dependent variables to determine their influence. It is an attempt by the researcher to maintain control over all factors that may affect the result, allowing them to determine or predict what may occur.</p>
+                 <p class="text-base leading-relaxed font-semibold text-[#005f73]">This method relies on controlled methods, random assignment, and the manipulation of variables to test a hypothesis.</p>
+            </div>
+        
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                <div class="bg-[#005f73] text-white rounded-lg shadow-lg p-6 md:p-8 flex flex-col justify-center">
+                     <h3 class="text-xl font-bold text-[#94d2bd] mb-4">The Architect's Blueprint</h3>
+                     <blockquote class="border-l-4 border-[#ee9b00] pl-4 italic">
+                        <p>Winer (1971) compared the design of an experiment to an architect’s plan... the researcher has to plan... so that the experiment on completion fulfils the objectives of research.</p>
+                     </blockquote>
+                     <p class="mt-4 text-sm text-[#94d2bd]">Just as a blueprint outlines the final structure of a building, an experimental design provides a detailed plan for the entire research process, ensuring objectives are met.</p>
+                </div>
+        
+                <div class="bg-white rounded-lg shadow-lg p-6 md:p-8">
+                    <h3 class="text-xl font-bold text-[#005f73] mb-4">Core Principles</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start"><span class="text-xl text-[#ee9b00] mr-3">🔬</span><span><b>Sophisticated Method:</b> Considered the most scientifically rigorous research method.</span></li>
+                        <li class="flex items-start"><span class="text-xl text-[#ee9b00] mr-3">🔗</span><span><b>Causal Relationships:</b> Uniquely suited to examine hypothesized causal links between dependent and independent variables.</span></li>
+                        <li class="flex items-start"><span class="text-xl text-[#ee9b00] mr-3">🎛️</span><span><b>Control:</b> The researcher actively controls factors and variables to isolate the cause-and-effect relationship.</span></li>
+                        <li class="flex items-start"><span class="text-xl text-[#ee9b00] mr-3">🔍</span><span><b>Objectivity:</b> Carried out in an objective and controlled fashion to maximize precision and draw specific conclusions.</span></li>
+                    </ul>
+                </div>
+            </div>
+        
+             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-gray-50 rounded-lg p-6 border-l-4 border-[#0a9396]">
+                     <blockquote class="italic text-[#001219]">
+                        <p>"Experimental design is the process of carrying out research in an objective and controlled fashion so that precision is maximized and specific conclusions can be drawn regarding a hypothesis statement."</p>
+                        <cite class="text-sm text-[#005f73] not-italic block mt-2 font-semibold">- Bell, 2009</cite>
+                     </blockquote>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-6 border-l-4 border-[#ca6702]">
+                     <blockquote class="italic text-[#001219]">
+                        <p>"The design of an information-gathering experiment in which a variation is present or not, and it should be executed under the researcher's complete control."</p>
+                        <cite class="text-sm text-[#005f73] not-italic block mt-2 font-semibold">- Statistics Definition</cite>
+                     </blockquote>
+                </div>
+            </div>
+        </section>
+        
+        <section id="experimental-concepts" class="mb-12">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-[#005f73]">Key Concepts in Experimental Design</h2>
+                <p class="text-md text-[#0a9396] mt-1">Understanding the fundamental building blocks of experimental research.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg shadow-lg p-6 h-full">
+                    <h3 class="font-bold text-lg text-[#005f73] mb-2 flex items-center"><span class="text-2xl mr-2">🔄</span>Variables</h3>
+                    <p class="text-sm"><strong class="text-[#ca6702]">Independent:</strong> The variable which is independent of others, but on which others depend.<br><strong class="text-[#0a9396]">Dependent:</strong> The variable that depends upon or is a consequence of the independent variable.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6 h-full">
+                    <h3 class="font-bold text-lg text-[#005f73] mb-2 flex items-center"><span class="text-2xl mr-2">🧩</span>Extraneous Variables</h3>
+                    <p class="text-sm">Independent variables that are not related to the purpose of the study, but may affect the dependent variable.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6 h-full">
+                    <h3 class="font-bold text-lg text-[#005f73] mb-2 flex items-center"><span class="text-2xl mr-2">📦</span>Experimental Units</h3>
+                    <p class="text-sm">The pre-determined plots or blocks where different treatments are used.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6 h-full">
+                    <h3 class="font-bold text-lg text-[#005f73] mb-2 flex items-center"><span class="text-2xl mr-2">🔗</span>Confounded Relationship</h3>
+                    <p class="text-sm">When the dependent variable is not free from the influence of extraneous variable(s), the relationship is said to be confounded.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6 h-full">
+                    <h3 class="font-bold text-lg text-[#005f73] mb-2 flex items-center"><span class="text-2xl mr-2">💡</span>Research Hypothesis</h3>
+                    <p class="text-sm">A prediction or a hypothesized relationship that is to be tested by scientific methods.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6 h-full">
+                    <h3 class="font-bold text-lg text-[#005f73] mb-2 flex items-center"><span class="text-2xl mr-2">🧪</span>Experiment</h3>
+                    <p class="text-sm">A procedure carried out under controlled conditions in order to test a hypothesis.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6 h-full">
+                    <h3 class="font-bold text-lg text-[#005f73] mb-2 flex items-center"><span class="text-2xl mr-2">🧑‍🔬</span>Groups</h3>
+                    <p class="text-sm"><strong class="text-[#ca6702]">Control Group:</strong> Exposed to usual conditions to provide a baseline for comparison.<br><strong class="text-[#0a9396]">Experimental Group:</strong> Exposed to some novel or special condition (the treatment).</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6 h-full">
+                    <h3 class="font-bold text-lg text-[#005f73] mb-2 flex items-center"><span class="text-2xl mr-2">💊</span>Treatment</h3>
+                    <p class="text-sm">The different conditions under which experimental and control groups are put.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6 h-full">
+                    <h3 class="font-bold text-lg text-[#005f73] mb-2 flex items-center"><span class="text-2xl mr-2">🔬</span>Hypothesis-Testing Research</h3>
+                    <p class="text-sm"><strong class="text-[#ca6702]">Experimental:</strong> The independent variable is manipulated by the researcher.<br><strong class="text-[#0a9396]">Non-experimental:</strong> The independent variable is not manipulated.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="experimental-terminology" class="mb-12">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-[#005f73]">Basic Terminology in Experimental Design</h2>
+                <p class="text-md text-[#0a9396] mt-1">Diving deeper into the language of experiments.</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-6 md:p-8 space-y-8">
+                <div>
+                    <h3 class="text-2xl font-bold text-[#005f73] mb-6 flex items-center"><span class="text-3xl mr-3">🅰️</span>Factors: The Independent Variables</h3>
+                    <div class="space-y-6">
+                        
+                        <div class="bg-gray-50 rounded-lg p-4 border-l-4 border-[#005f73]">
+                            <p class="text-base">Any independent variable used in an experiment, whether it's a treatment or a classification, is called a <strong class="font-semibold">factor</strong>. Factors are typically denoted by capital letters like A, B, C, etc.</p>
+                        </div>
+
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            
+                            <div class="border border-gray-200 rounded-lg p-4">
+                                <h4 class="font-bold text-lg text-[#0a9396] mb-2">1. Treatment Variable (E-type Factor)</h4>
+                                <p class="text-sm mb-2">This is a factor that the experimenter <strong class="text-[#ca6702]">actively manipulates</strong>.</p>
+                                <p class="text-xs italic bg-gray-100 p-2 rounded"><strong>Example:</strong> An experimenter administers different teaching methods to different groups to see the effect on achievement scores. The "teaching method" is the treatment variable.</p>
+                            </div>
+
+                            
+                            <div class="border border-gray-200 rounded-lg p-4">
+                                <h4 class="font-bold text-lg text-[#0a9396] mb-2">2. Classification Variable (S-type Factor)</h4>
+                                <p class="text-sm mb-2">This is a factor based on a pre-existing characteristic of the subjects, which is <strong class="text-[#ca6702]">manipulated through selection</strong>, not direct intervention.</p>
+                                <p class="text-xs italic bg-gray-100 p-2 rounded"><strong>Examples:</strong> Sex, age, IQ level, socioeconomic status, genetic errors, etc. These are characteristics the subjects already possess.</p>
+                            </div>
+                        </div>
+
+                        
+                         <div class="bg-gray-50 rounded-lg p-4 border-l-4 border-[#ee9b00]">
+                            <h4 class="font-bold text-lg text-[#005f73] mb-2">The Role of S-Type Factors</h4>
+                            <p class="text-sm">S-type factors are generally included to classify subjects for <strong class="font-semibold">control purposes</strong>. However, sometimes the experimenter is interested in evaluating the effect of these classification factors themselves.</p>
+                             <p class="text-xs italic bg-white mt-2 p-2 rounded border"><strong>Example:</strong> An experimenter might classify subjects into low, medium, and high socioeconomic groups to assess differences in a dependent variable among these groups.</p>
+                        </div>
+                        
+                         
+                        <div class="bg-gray-50 rounded-lg p-4 border-l-4 border-[#ca6702]">
+                            <h4 class="font-bold text-lg text-[#005f73] mb-2">Putting It Together: A Two-Factor Experiment</h4>
+                            <p class="text-sm">Imagine an experiment designed to study the effects of both strain and rearing environment on children's performance. In this study:</p>
+                            <ul class="list-disc pl-5 mt-2 text-sm space-y-1">
+                                <li><strong class="font-semibold">Factor A:</strong> Strain (e.g., a classification or S-type factor).</li>
+                                <li><strong class="font-semibold">Factor B:</strong> Rearing Environment (e.g., a treatment or E-type factor that could be manipulated).</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                        <!-- Levels Section -->
+                        <div class="bg-gray-50 rounded-lg shadow-sm p-4 border-l-4 border-[#0a9396]">
+                            <h4 class="font-bold text-xl text-[#005f73] mb-3 flex items-center"><span class="text-2xl mr-2">📊</span>Levels</h4>
+                            <p class="text-base mb-2">Each specific variation or category within a factor is called a <strong class="font-semibold">level</strong>. A factor must have at least two levels to be compared.</p>
+                            <div class="mt-4 bg-white p-3 rounded-lg border border-gray-200">
+                                <p class="font-semibold text-sm mb-2 text-[#005f73]">Example: Factor 'Drug Dosage'</p>
+                                <p class="text-sm mb-2">An experimenter wants to test the effect of a new drug. The factor is the 'drug', and the chosen levels could be different dosages:</p>
+                                <div class="flex flex-wrap gap-2 text-sm">
+                                    <span class="bg-[#e9f5f5] text-[#0a9396] font-medium px-3 py-1 rounded-full">0 mg (Placebo)</span>
+                                    <span class="bg-[#e9f5f5] text-[#0a9396] font-medium px-3 py-1 rounded-full">5 mg</span>
+                                    <span class="bg-[#e9f5f5] text-[#0a9396] font-medium px-3 py-1 rounded-full">10 mg</span>
+                                </div>
+                                <p class="font-semibold text-sm mt-4 mb-2 text-[#005f73]">Notation</p>
+                                <p class="text-sm">Levels are designated by a lowercase letter of the factor symbol with a subscript. If Factor is A, its levels are:</p>
+                                <p class="text-sm font-mono mt-1">a₁, a₂, a₃, ..., aₚ</p>
+                            </div>
+                        </div>
+
+                        <!-- Dimensions Section -->
+                        <div class="bg-gray-50 rounded-lg shadow-sm p-4 border-l-4 border-[#ee9b00]">
+                             <h4 class="font-bold text-xl text-[#005f73] mb-3 flex items-center"><span class="text-2xl mr-2">🎲</span>Dimensions</h4>
+                            <p class="text-base mb-2">The <strong class="font-semibold">dimension</strong> of an experiment describes its complexity, indicated by the number of factors and the number of levels within each factor.</p>
+                            <div class="mt-4 bg-white p-3 rounded-lg border border-gray-200">
+                                <p class="font-semibold text-sm mb-2 text-[#005f73]">Example: A 2x3x4 Factorial Design</p>
+                                <p class="text-sm mb-2">An experiment with three factors (A, B, C):</p>
+                                <ul class="list-disc pl-5 text-sm space-y-1">
+                                    <li><strong>Factor A:</strong> Gender (2 levels: Male, Female)</li>
+                                    <li><strong>Factor B:</strong> Socio-economic Status (3 levels: Low, Middle, High)</li>
+                                    <li><strong>Factor C:</strong> Age Group (4 levels: 15-20, 21-25, 26-30, 31-35)</li>
+                                </ul>
+                                <p class="text-sm mt-2">The dimension of this experiment is written as <strong class="font-mono text-[#ca6702]">2 × 3 × 4</strong>.</p>
+                                <p class="font-semibold text-sm mt-4 mb-2 text-[#005f73]">General Form</p>
+                                <p class="text-sm">A three-factor experiment with 'p' levels for Factor A, 'q' levels for Factor B, and 'r' levels for Factor C is designated as a <strong class="font-mono text-[#ca6702]">p × q × r</strong> factorial experiment.</p>
+                            </div>
+                        </div>
+
+                        <!-- Treatment Combinations Section -->
+                        <div class="bg-gray-50 rounded-lg shadow-sm p-4 border-l-4 border-[#ca6702]">
+                             <h4 class="font-bold text-xl text-[#005f73] mb-3 flex items-center"><span class="text-2xl mr-2">🧩</span>Treatment Combinations</h4>
+                            <p class="text-base mb-2">A <strong class="font-semibold">treatment combination</strong> is a particular set of experimental conditions created by combining one level from each factor in the experiment.</p>
+                            <div class="mt-4 bg-white p-3 rounded-lg border border-gray-200">
+                                <p class="font-semibold text-sm mb-2 text-[#005f73]">Single-Factor vs. Multi-Factor</p>
+                                <p class="text-sm mb-2">Though sometimes used interchangeably, 'treatment' and 'treatment combination' have a slight difference:</p>
+                                <ul class="list-disc pl-5 text-sm space-y-1">
+                                    <li><strong>In a single-factor study</strong>, the levels of the factor are the treatments. If studying IQ's effect on achievement with levels 90, 100, and 110, you have 3 treatments.</li>
+                                    <li><strong>In a multi-factor study (e.g., 2x3 design)</strong>, you have 2 x 3 = 6 unique treatment combinations. Each combination is a specific pairing of a level from Factor A and a level from Factor B.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Replication Section -->
+                        <div class="bg-gray-50 rounded-lg shadow-sm p-4 border-l-4 border-[#bb3e03]">
+                            <h4 class="font-bold text-xl text-[#005f73] mb-3 flex items-center"><span class="text-2xl mr-2">🔁</span>Replication</h4>
+                            <p class="text-base mb-2">The term <strong class="font-semibold">replication</strong> refers to an independent repetition of the experiment under conditions that are as identical as possible.</p>
+                             <div class="mt-4 bg-white p-3 rounded-lg border border-gray-200">
+                                <p class="font-semibold text-sm mb-2 text-[#005f73]">Key Principle</p>
+                                <p class="text-sm">The experimental subjects used in each repetition must be <strong class="text-[#bb3e03]">independent samples</strong> that are randomly drawn from the population being studied. This helps ensure that the results are reliable and not due to chance or a specific group of subjects.</p>
+                            </div>
+                        </div>
+
+                        <!-- Main Effects Section -->
+                        <div class="bg-gray-50 rounded-lg shadow-sm p-4 border-l-4 border-[#ae2012]">
+                            <h4 class="font-bold text-xl text-[#005f73] mb-3 flex items-center"><span class="text-2xl mr-2">📈</span>Main Effects</h4>
+                            <p class="text-base mb-2">The <strong class="font-semibold">main effect</strong> of a factor is the difference in performance from one level to another for that specific factor, averaged across the levels of all other factors in the study. In statistical terms, the mean squares for the levels of a factor represent its main effect.</p>
+                            <div class="mt-4 bg-white p-3 rounded-lg border border-gray-200">
+                                <p class="font-semibold text-sm mb-2 text-[#005f73]">Example: A 2x3x4 Factorial Experiment</p>
+                                <p class="text-sm mb-2">Consider an A × B × C experiment where Factor A has 2 levels (a₁, a₂), Factor B has 3 levels (b₁, b₂, b₃), and Factor C has 4 levels (c₁, c₂, c₃, c₄).</p>
+                                <ul class="list-disc pl-5 text-sm space-y-1">
+                                    <li>The <strong>main effect of Factor A</strong> is the difference in performance between level a₁ and a₂, averaged across all levels of B and C.</li>
+                                    <li>The <strong>main effect of Factor B</strong> is the difference in performance between levels b₁, b₂, and b₃, averaged across all levels of A and C.</li>
+                                    <li>And so on for Factor C. Main effects can also be represented graphically to visualize their impact.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Simple Effect Section -->
+                        <div class="bg-gray-50 rounded-lg shadow-sm p-4 border-l-4 border-[#9b2226]">
+                            <h4 class="font-bold text-xl text-[#005f73] mb-3 flex items-center"><span class="text-2xl mr-2">🔍</span>Simple Effect</h4>
+                            <p class="text-base mb-2">In a factorial experiment, the <strong class="font-semibold">simple effect</strong> is the effect of one factor at a single, specific level of another factor. It's used to break down and understand interaction effects.</p>
+                             <div class="mt-4 bg-white p-3 rounded-lg border border-gray-200">
+                                <p class="font-semibold text-sm mb-2 text-[#005f73]">Example: A 2x2 Factorial Experiment</p>
+                                <p class="text-sm mb-2">Imagine a study with two factors, A and B, each with two levels.</p>
+                                <ul class="list-disc pl-5 text-sm space-y-1">
+                                    <li>The <strong>simple effect of A</strong> would be the effect of A's two levels at the first level of B, and then separately at the second level of B.</li>
+                                    <li>Similarly, the <strong>simple effect of B</strong> is its effect at each of the two levels of A.</li>
+                                </ul>
+                                <p class="text-sm italic mt-2"><strong>Real-world scenario:</strong> Analyzing the effect of social media (Factor A) on youths vs. adolescents (Factor B) within urban areas, and then separately within rural areas.</p>
+                            </div>
+                        </div>
+
+                        <!-- Interaction Effect Section -->
+                        <div class="bg-gray-50 rounded-lg shadow-sm p-4 border-l-4 border-[#800f2f]">
+                            <h4 class="font-bold text-xl text-[#005f73] mb-3 flex items-center"><span class="text-2xl mr-2">↔️</span>Interaction Effect</h4>
+                            <p class="text-base mb-2">Factorial experiments are powerful because they allow investigators to study the effects of more than one factor simultaneously. An <strong class="font-semibold">interaction effect</strong> occurs when the effect of one factor changes depending on the level of another factor.</p>
+                             <div class="mt-4 bg-white p-3 rounded-lg border border-gray-200">
+                                <p class="font-semibold text-sm mb-2 text-[#005f73]">Example: A 2x2 Factorial Experiment</p>
+                                <p class="text-sm mb-2">An investigator studies the simultaneous effects of two factors on the achievement scores of 8th-grade students:</p>
+                                <ul class="list-disc pl-5 text-sm space-y-1 mb-4">
+                                    <li><strong>Factor A (Method of Learning):</strong> a₁ (Massed), a₂ (Distributed)</li>
+                                    <li><strong>Factor B (Level of Intelligence):</strong> b₁ (High), b₂ (Low)</li>
+                                </ul>
+                                
+                                <p class="font-semibold text-sm mb-2 text-center text-[#005f73]">Mean Scores (2x2 Contingency Table)</p>
+                                <div class="overflow-x-auto">
+                                    <table class="w-full text-center border border-gray-300">
+                                        <thead class="bg-gray-100">
+                                            <tr>
+                                                <th class="p-2 border border-gray-300"></th>
+                                                <th colspan="2" class="p-2 border border-gray-300">A (Method of Learning)</th>
+                                            </tr>
+                                            <tr>
+                                                <th class="p-2 border border-gray-300">B (Intelligence)</th>
+                                                <th class="p-2 border border-gray-300">a₁ (Massed)</th>
+                                                <th class="p-2 border border-gray-300">a₂ (Distributed)</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="p-2 border border-gray-300 font-medium">b₁ (High)</td>
+                                                <td class="p-2 border border-gray-300">70.1</td>
+                                                <td class="p-2 border border-gray-300">90.8</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="p-2 border border-gray-300 font-medium">b₂ (Low)</td>
+                                                <td class="p-2 border border-gray-300">50.0</td>
+                                                <td class="p-2 border border-gray-300">60.5</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                
+                                <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                                    <div>
+                                        <p class="font-semibold mb-2 text-[#005f73]">Calculation Method 1</p>
+                                        <p>Difference for High Intelligence (b₁):<br> <span class="font-mono">90.8 - 70.1 = <strong>20.7</strong></span></p>
+                                        <p class="mt-2">Difference for Low Intelligence (b₂):<br> <span class="font-mono">60.5 - 50.0 = <strong>10.5</strong></span></p>
+                                        <p class="mt-2 font-bold">Interaction:<br> <span class="font-mono">20.7 - 10.5 = <span class="bg-[#f9dcc4] px-1 rounded">10.2</span></span></p>
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold mb-2 text-[#005f73]">Alternatively (Method 2)</p>
+                                        <p>Difference for Distributed Method (a₂):<br> <span class="font-mono">90.8 - 60.5 = <strong>30.3</strong></span></p>
+                                        <p class="mt-2">Difference for Massed Method (a₁):<br> <span class="font-mono">70.1 - 50.0 = <strong>20.1</strong></span></p>
+                                        <p class="mt-2 font-bold">Interaction:<br> <span class="font-mono">30.3 - 20.1 = <span class="bg-[#f9dcc4] px-1 rounded">10.2</span></span></p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="types-of-experimental-design-detailed" class="mb-12">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-[#005f73]">Types of Experimental Design</h2>
+                <p class="text-md text-[#0a9396] mt-1">A method design that allows the researcher to test a hypothesis by drawing reliable conclusions regarding the links between independent and dependent variables.</p>
+            </div>
+        
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10 text-center">
+                <div class="bg-[#005f73] text-white p-4 rounded-lg shadow-md">
+                    <h3 class="font-bold text-lg">1. Pre-experimental</h3>
+                </div>
+                <div class="bg-[#0a9396] text-white p-4 rounded-lg shadow-md">
+                    <h3 class="font-bold text-lg">2. True experimental</h3>
+                </div>
+                <div class="bg-[#ee9b00] text-white p-4 rounded-lg shadow-md">
+                    <h3 class="font-bold text-lg">3. Quasi-experimental</h3>
+                </div>
+            </div>
+        
+            <div class="bg-white rounded-lg shadow-lg p-6 md:p-8">
+                <h3 class="text-2xl font-bold text-[#005f73] mb-4 flex items-center"><span class="text-3xl mr-3">1️⃣</span>Pre-Experimental Designs</h3>
+                <div class="space-y-4 text-base">
+                    <p>As the name suggests, pre-experimental research happens <strong class="text-[#ca6702]">before the true experiment starts</strong>. This is done to determine the researchers’ intervention on a group of people. This will help them tell if the investment of cost and time for conducting a true experiment is worthwhile. Hence, pre-experimental research is a preliminary step to justify the presence of the researcher’s intervention.</p>
+                    <p>The pre-experimental approach helps give some sort of guarantee that the experiment can be a full-scale successful study.</p>
+                    <p class="bg-red-50 border-l-4 border-red-500 p-4 rounded-r-lg">The pre-experimental design <strong class="font-semibold">does not have a comparison group</strong>. This means that while a researcher can claim that participants who received a certain treatment have experienced a change, they cannot conclude that the change was caused by the treatment itself.</p>
+                </div>
+        
+                <div class="mt-8">
+                    <h4 class="text-xl font-bold text-[#0a9396] mb-4">Characteristics of Pre-experimental Designs</h4>
+                    <ul class="space-y-3 list-disc pl-5">
+                        <li>Generally uses only <strong class="font-semibold">one group for treatment</strong>, which makes observation simple and easy.</li>
+                        <li>Validates the experiment in the <strong class="font-semibold">preliminary phase</strong> itself.</li>
+                        <li>Pre-experimental design tells the researchers how their intervention will affect the whole study.</li>
+                        <li>As they are conducted in the beginning, pre-experimental designs give <strong class="font-semibold">evidence for or against</strong> their intervention.</li>
+                        <li>It does <strong class="font-semibold">not involve the randomization</strong> of the participants.</li>
+                        <li>It generally does not involve a control group, but in some cases where there is a need for studying the control group against the treatment group, static-group comparison comes into the picture.</li>
+                        <li>The pre-experimental design gives an idea about how the treatment is going to work in case of actual true experiments.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+         <section id="types-of-pre-design" class="mb-12">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-[#005f73]">Types of Pre-Experimental Designs</h2>
+                <p class="text-md text-[#0a9396] mt-1">Exploring the three main frameworks in this category.</p>
+            </div>
+
+            <div class="space-y-12">
+                <!-- One-shot case study design -->
+                <div class="bg-white rounded-lg shadow-lg p-6 md:p-8">
+                    <h3 class="text-2xl font-bold text-[#0a9396] mb-4 flex items-center"><span class="text-3xl mr-3">1</span>One-shot Case Study Design</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+                        <div>
+                            <p class="text-base mb-2">This design practices the treatment of a single group and takes only a single measurement after the experiment. It analyzes post-test results by comparing them to the expected outcome, making it clear how the case would have looked without the treatment.</p>
+                            <p class="text-base mt-4 font-semibold text-[#005f73]">Key Features:</p>
+                            <ul class="list-disc pl-5 space-y-1 text-sm">
+                                <li>Treats a single group.</li>
+                                <li>Takes a single measurement after the experiment.</li>
+                                <li>Only analyzes post-test results.</li>
+                                <li><strong class="text-[#ca6702]">No control group.</strong></li>
+                            </ul>
+                        </div>
+                        <div class="bg-gray-50 rounded-lg p-4 border-l-4 border-[#ee9b00] h-full flex flex-col justify-center">
+                            <p class="text-sm font-semibold text-[#005f73] mb-2">Example:</p>
+                            <p class="text-sm italic">A team leader implements a new soft skills program. At the end of the first month, employees are measured for improvement. The leader knows the impact of the program on the employees.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- One-group pretest-posttest design -->
+                <div class="bg-white rounded-lg shadow-lg p-6 md:p-8">
+                    <h3 class="text-2xl font-bold text-[#ca6702] mb-4 flex items-center"><span class="text-3xl mr-3">2</span>One-group Pretest-Posttest Design</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+                        <div>
+                            <p class="text-base mb-2">Like the previous design, this also works on just one experimental group. However, it takes two measures into account: a pre-test and a post-test. The pre-test shows the group's state before treatment, and the post-test determines the changes after the treatment. While it sounds like a true experiment, it does not have a control group.</p>
+                            <p class="text-base mt-4 font-semibold text-[#005f73]">Key Features:</p>
+                            <ul class="list-disc pl-5 space-y-1 text-sm">
+                                <li>Works with a single group.</li>
+                                <li>Includes both a pre-test and a post-test.</li>
+                                <li>Measures changes within the same group.</li>
+                                <li><strong class="text-[#ca6702]">No control group.</strong></li>
+                            </ul>
+                        </div>
+                        <div class="bg-gray-50 rounded-lg p-4 border-l-4 border-[#ae2012] h-full flex flex-col justify-center">
+                            <p class="text-sm font-semibold text-[#005f73] mb-2">Example:</p>
+                            <p class="text-sm italic">A team leader conducts a test before implementing the soft skills program to gauge employee skill levels. After the training, a second test is conducted to measure their status. This provides a clear frame of reference for the program's impact.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Static-group comparison -->
+                <div class="bg-white rounded-lg shadow-lg p-6 md:p-8">
+                    <h3 class="text-2xl font-bold text-[#ee9b00] mb-4 flex items-center"><span class="text-3xl mr-3">3</span>Static-group Comparison</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+                        <div>
+                            <p class="text-base mb-2">This design compares two groups. One group (the experimental group) is exposed to the treatment, while the other (the control group) is not. The difference between the two groups after the experiment is the result. Because it involves a control group, this design is sometimes considered a quasi-experimental design.</p>
+                            <p class="text-base mt-4 font-semibold text-[#005f73]">Key Features:</p>
+                            <ul class="list-disc pl-5 space-y-1 text-sm">
+                                <li>Compares two groups.</li>
+                                <li>Includes an experimental group and a control group.</li>
+                                <li>Determines the outcome by comparing both groups.</li>
+                            </ul>
+                        </div>
+                        <div class="bg-gray-50 rounded-lg p-4 border-l-4 border-[#9b2226] h-full flex flex-col justify-center">
+                            <p class="text-sm font-semibold text-[#005f73] mb-2">Example:</p>
+                            <p class="text-sm italic">The team leader gives soft skills training to one group of employees, while another group remains a control group. After the training, he compares the two groups and finds the treated group shows more evolved soft skills than the control group.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="validity-advantages-disadvantages" class="mb-12">
+            <div class="bg-white rounded-lg shadow-lg p-6 md:p-8">
+                <h2 class="text-2xl font-bold text-[#005f73] mb-4">Validity, Advantages, and Disadvantages</h2>
+                
+                <!-- Validity -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold text-[#0a9396] mb-2">Validity of Results</h3>
+                    <p class="text-base leading-relaxed">
+                        In pre-experimental research, the validity of results is a tough catch. It is challenging to definitively prove that the treatment caused the observed change because there are no control groups for comparison. Without a comparison group, it's hard to tell how significant or valid a result is. The results may have occurred due to other factors like the group's natural maturation or just by chance.
+                    </p>
+                </div>
+
+                <!-- Advantages -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold text-[#0a9396] mb-2">Advantages of Pre-experimental Designs</h3>
+                    <ul class="list-disc pl-5 space-y-2 text-base leading-relaxed">
+                        <li><span class="font-semibold">Cost-effective:</span> They are simple and quick to conduct, which makes them a low-cost option for initial research.</li>
+                        <li><span class="font-semibold">Simple to Conduct:</span> The straightforward process makes this a good starting point for researchers.</li>
+                        <li><span class="font-semibold">Efficient in Natural Environments:</span> This design is effective when studying groups in their natural, unaltered setting.</li>
+                        <li><span class="font-semibold">Suitable for Beginners:</span> It is an ideal starting point for researchers who are new to experimental design.</li>
+                        <li><span class="font-semibold">Less Human Intervention:</span> It requires minimal interference with the subjects, making the process less complex.</li>
+                        <li><span class="font-semibold">Preliminary Check:</span> It helps determine if a true experiment is worth the investment of time and resources.</li>
+                    </ul>
+                </div>
+
+                <!-- Disadvantages -->
+                <div>
+                    <h3 class="text-xl font-semibold text-[#0a9396] mb-2">Disadvantages of Pre-experimental Designs</h3>
+                    <ul class="list-disc pl-5 space-y-2 text-base leading-relaxed">
+                        <li><span class="font-semibold">Weak Causal Relationships:</span> It is not a strong design for determining cause-and-effect relationships between variables.</li>
+                        <li><span class="font-semibold">Lack of Control:</span> Researchers have little to no control over the study, which can lead to biased results.</li>
+                        <li><span class="font-semibold">High Threat to Internal Validity:</span> The absence of a control group and other factors makes it difficult to trust the results' integrity.</li>
+                        <li><span class="font-semibold">Results Are Unreliable:</span> The lack of a comparison group makes the results less reliable and difficult to generalize.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- New section for True Experimental Designs -->
+        <div class="bg-white rounded-lg shadow-lg p-6 md:p-8">
+                <h3 class="text-2xl font-bold text-[#005f73] mb-4 flex items-center"><span class="text-3xl mr-3">2️⃣</span>True-Experimental Designs</h3>
+                <div class="space-y-4 text-base">
+                <p class="text-base leading-relaxed mb-4">
+                    This is the most accurate form of experimental research design as it relies on the statistical hypothesis to prove or disprove a hypothesis. This is the most commonly used method implemented in Physical Science. True experimental research design is the only method that establishes the cause-and-effect relationship within the groups.
+                </p>
+                <div class="bg-gray-50 rounded-lg p-4 mb-6 border-l-4 border-[#0a9396]">
+                    <p class="text-sm text-[#005f73] font-semibold">The factors that need to be satisfied in this method are:</p>
+                    <ul class="list-disc pl-5 text-sm mt-2 space-y-1">
+                        <li><span class="font-bold">Randomization:</span> Random variable.</li>
+                        <li><span class="font-bold">Manipulation:</span> Variable can be manipulated by the researcher.</li>
+                        <li><span class="font-bold">Control Groups:</span> A group of participants is familiar with the experimental group, but the experimental rules do not apply to them.</li>
+                        <li><span class="font-bold">Experimental Group:</span> Research participants where experimental rules are applied.</li>
+                    </ul>
+                </div>
+                <p class="text-base leading-relaxed italic">
+                    It may be performed on at least two randomly assigned dependent subjects with or without a pretest. A true experimental research design must have a control group, a variable that can be modified by the researcher, and a random distribution.
+                </p>
+            </div>
+        </section>
+
+        <section id="properties" class="mb-12">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-[#005f73]">Properties of True Experimental Design</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Manipulation -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <div class="text-4xl mb-4 text-[#ae2012]">🔨</div>
+                    <h3 class="text-xl font-bold text-[#0a9396] mb-2">Manipulation</h3>
+                    <p class="text-sm leading-relaxed">
+                        The process of intentional change of testing variables, generally, the independent variables (treatment variables) of a study to see the effects on the dependent variables.
+                    </p>
+                </div>
+                <!-- Control -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <div class="text-4xl mb-4 text-[#9b2226]">🔒</div>
+                    <h3 class="text-xl font-bold text-[#ca6702] mb-2">Control</h3>
+                    <p class="text-sm leading-relaxed">
+                        In experimental research, control is the effort to remove the influence of extraneous variables on the dependent variable under investigation.
+                    </p>
+                </div>
+                <!-- Randomization -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <div class="text-4xl mb-4 text-[#ee9b00]">🎲</div>
+                    <h3 class="text-xl font-bold text-[#ee9b00] mb-2">Randomization</h3>
+                    <p class="text-sm leading-relaxed">
+                        Randomization in experimental design is essentially the process of randomly assigning participants across experimental and control groups. It assumes that all participants are equally to be assigned to any condition without bias.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="process" class="mb-12">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-[#005f73]">Process of Experimental Design</h2>
+                <p class="text-md text-[#0a9396] mt-1">A step-by-step guide to conducting true experimental research.</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-6 md:p-8 space-y-6">
+                <div class="flex items-start space-x-4">
+                    <div class="flex-shrink-0 text-3xl font-bold text-[#0a9396]">1.</div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-[#005f73]">Define Research Problem</h3>
+                        <p class="text-base leading-relaxed">Identify the problem. Experimental research is primarily conducted to solve practical, rather than theoretical, problems.</p>
+                    </div>
+                </div>
+                <div class="flex items-start space-x-4">
+                    <div class="flex-shrink-0 text-3xl font-bold text-[#0a9396]">2.</div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-[#005f73]">Determine Variables</h3>
+                        <p class="text-base leading-relaxed">A research question must be transformed into an experimental hypothesis by defining the key variables and predicting their relationships.</p>
+                    </div>
+                </div>
+                <div class="flex items-start space-x-4">
+                    <div class="flex-shrink-0 text-3xl font-bold text-[#0a9396]">3.</div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-[#005f73]">Formulate Hypothesis</h3>
+                        <p class="text-base leading-relaxed">Create a precise, testable hypothesis that corresponds to the research topic.</p>
+                    </div>
+                </div>
+                <div class="flex items-start space-x-4">
+                    <div class="flex-shrink-0 text-3xl font-bold text-[#0a9396]">4.</div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-[#005f73]">Design a Controlled Experiment</h3>
+                        <p class="text-base leading-relaxed">Create a plan that addresses all elements and conditions. This involves:
+                            <ul class="list-disc pl-5 text-sm space-y-1 mt-2">
+                                <li>Manipulating the independent variable(s) systematically and precisely.</li>
+                                <li>Measuring the dependent variable(s) with precision.</li>
+                                <li>Controlling any factors that can cause confusion.</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+                <div class="flex items-start space-x-4">
+                    <div class="flex-shrink-0 text-3xl font-bold text-[#0a9396]">5.</div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-[#005f73]">Design Experimental Treatments</h3>
+                        <p class="text-base leading-relaxed">
+                            Manipulation of the independent variable can have an impact on the experiment's external validity or the extent to which the results can be extended and applied to the broader world. The first step is to consider how widely the independent variable should be varied. The second step is to decide how finely to alter the independent variable. If subjects are exposed to more than one treatment, then the findings could only be generalized to individuals exposed to the same treatments in the same order of presentation.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex items-start space-x-4">
+                    <div class="flex-shrink-0 text-3xl font-bold text-[#0a9396]">6.</div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-[#005f73]">Measure Dependent Variables</h3>
+                        <p class="text-base leading-relaxed">
+                            Finally, determining the collection method of data on the dependent variable outcomes. The aim should be to achieve accurate and valid measures that reduce research bias or inaccuracy. Some factors can be best measured using scientific tools. Others may need to be operationalized prior to being measured.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="blinding" class="mb-12">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-[#005f73]">Blinding in Experimental Design</h2>
+                <p class="text-md text-[#0a9396] mt-1">Preventing bias in clinical trials.</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-6 md:p-8">
+                <p class="text-base leading-relaxed mb-4">
+                    Blinding is a methodological technique used in clinical trials to prevent bias by keeping participants, investigators, and assessors unaware of treatment group assignments. It involves concealing research design elements like the group assignment, treatment agent, and research hypothesis. Blinding can help improve the accuracy of results by reducing error that may result from subjects' knowledge of their assignment to study conditions.
+                </p>
+                <h3 class="text-xl font-semibold text-[#005f73] mb-2">Qualities of Effective Blinding</h3>
+                <ul class="list-disc pl-5 space-y-2 mb-6 text-base leading-relaxed">
+                    <li><span class="font-bold">Concealment:</span> The technique must successfully hide the group allocation.</li>
+                    <li><span class="font-bold">Assessment:</span> The technique must not impair the ability to accurately assess outcomes.</li>
+                    <li><span class="font-bold">Acceptance:</span> The technique must be acceptable to the individuals who will be assessing outcomes.</li>
+                </ul>
+
+                <h3 class="text-xl font-semibold text-[#005f73] mb-2">Types of Blinding</h3>
+                <ul class="list-disc pl-5 space-y-4 mb-6 text-base leading-relaxed">
+                    <li><span class="font-bold">Single-blind:</span> Conceals from the participants whether a treatment or placebo is administered.</li>
+                    <li><span class="font-bold">Double-blind:</span> Conceals it from participants and administrators. In double-blind experiments, the group assignment is hidden from both the participant and the person administering the experiment.</li>
+                    <li><span class="font-bold">Triple-blind:</span> Researchers can also blind the individuals performing the statistical analysis by labeling the groups with no identifying terms, such as A and B.</li>
+                </ul>
+                <p class="text-base leading-relaxed mb-4">
+                    Blinding helps ensure a study’s internal validity, or the extent to which you can be confident any link you find in your study is a true cause-and-effect relationship.
+                </p>
+                <p class="text-base leading-relaxed">
+                    Double or triple blinding is often not possible. While medical experiments can usually use a placebo or fake treatment for blinding, in other types of research, the treatment sometimes cannot be disguised from either the participant or the experimenter. For example, many treatments that physical therapists perform cannot be faked.
+                </p>
+            </div>
+        </section>
+
+        <section id="types-true-experimental" class="mb-12">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-[#005f73]">Types of True Experimental Designs</h2>
+            </div>
+            <div class="space-y-12">
+                <!-- Two groups post test only -->
+                <div class="bg-white rounded-lg shadow-lg p-6 md:p-8">
+                    <h3 class="text-2xl font-bold text-[#0a9396] mb-4 flex items-center">1. Two Groups Post-Test Only</h3>
+                    <div class="space-y-4">
+                        <p class="text-base leading-relaxed">
+                            Subjects are randomly selected and assigned to experimental and control groups. A treatment or intervention is given to the experimental group. Afterward, both groups are tested and conclusions are drawn from the comparisons of both results.
+                        </p>
+                        <div class="bg-gray-50 rounded-lg p-4 border-l-4 border-[#ee9b00]">
+                            <p class="text-sm font-semibold text-[#005f73] mb-2">Example:</p>
+                            <p class="text-sm italic">
+                                To study the effects of Technology Integration on the Academic Performance of Students, no technology intervention is given to the control group while technology intervention is given to the experimental group. Types of technology lessons and frequency of technology lessons are used (Manipulation). After the intervention, if students of the control group score a B grade and the experimental group students score an A grade, it can be concluded that the technology intervention has a positive impact on the academic performance of students.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Two groups pre test and Post test -->
+                <div class="bg-white rounded-lg shadow-lg p-6 md:p-8">
+                    <h3 class="text-2xl font-bold text-[#ca6702] mb-4 flex items-center">2. Two Groups Pre-Test and Post-Test</h3>
+                    <div class="space-y-4">
+                        <p class="text-base leading-relaxed">
+                            Subjects are randomly selected and assigned to an experimental and a control group. Both groups are tested before the intervention or treatment (pretest). A treatment or intervention is given to the experimental group. Both groups are then tested after the intervention (posttest) to determine the degree of changes in the groups.
+                        </p>
+                        <div class="bg-gray-50 rounded-lg p-4 border-l-4 border-[#ae2012]">
+                            <p class="text-sm font-semibold text-[#005f73] mb-2">Example:</p>
+                            <p class="text-sm italic">
+                                To study the effect of role-playing as a teaching strategy on students’ reading comprehension, a pretest is administered to both a control group and an experimental group. After the pretest, the control group is not given any new strategy and continues with regular teaching activities, while the experimental group is taught with different role-playing techniques. After the intervention, the investigator will see if there is a difference between the pretest and post-test scores. If pre-test scores are B in both groups and after the intervention post-test scores are B and A+ in the control group and experimental group respectively, it is concluded that role-playing as a teaching strategy has been effective for enhancing students' reading comprehension skills.
+                            </p>
+                        </div>
+                        <div class="mt-4 p-4 rounded-lg border-l-4 border-[#94d2bd] bg-gray-50">
+                            <p class="text-sm leading-relaxed">
+                                A two-group pre-test post-test design is an experimental design where a sample is randomly divided into two groups, and each group is measured before and after a treatment:
+                            </p>
+                            <ul class="list-disc pl-5 text-sm mt-2 space-y-1">
+                                <li>Random assignment: Subjects are randomly assigned to either a treatment group or a control group.</li>
+                                <li>Pretest: All subjects complete a pretest before the treatment.</li>
+                                <li>Treatment: The treatment group receives the treatment, while the control group does not.</li>
+                                <li>Posttest: All subjects complete a posttest after the treatment.</li>
+                            </ul>
+                            <p class="text-sm leading-relaxed mt-2">
+                                This design is used to determine conclusions about a phenomenon or to test a hypothesis. The design is considered a mixed design because it has two independent variables: treatment, which is the between-groups variable, and change over time, which is the within-subjects variable.
+                            </p>
+                            <p class="text-sm leading-relaxed mt-2">
+                                The paired samples t-test, also known as the dependent samples t-test, is a statistical test that can be used to compare pre-test and post-test scores.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Solomon four groups designs -->
+                <div class="bg-white rounded-lg shadow-lg p-6 md:p-8">
+                    <h3 class="text-2xl font-bold text-[#ee9b00] mb-4 flex items-center">3. Solomon Four-Group Design</h3>
+                    <p class="text-base leading-relaxed mb-4">
+                        The Solomon four-group design is a research method developed by Richard Solomon in 1949. It is sometimes used in social science, psychology, and medicine. This design is highly robust as it can be used if there are concerns that the treatment might be sensitized by the pre-test. In addition to the usual two groups (treatment and control), it has a second pair of groups who do not receive a pre-intervention evaluation.
+                    </p>
+                    <div class="bg-gray-50 rounded-lg p-4 border-l-4 border-[#0a9396] mb-4">
+                        <p class="text-sm font-semibold text-[#005f73] mb-2">The four groups in the Solomon design:</p>
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full table-auto text-sm text-left whitespace-nowrap">
+                                <thead>
+                                    <tr class="bg-[#0a9396] text-white">
+                                        <th class="px-4 py-2">Group</th>
+                                        <th class="px-4 py-2">Pre-intervention</th>
+                                        <th class="px-4 py-2">Intervention</th>
+                                        <th class="px-4 py-2">Post-intervention</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="px-4 py-2 border-b border-gray-200">1</td>
+                                        <td class="px-4 py-2 border-b border-gray-200">Test</td>
+                                        <td class="px-4 py-2 border-b border-gray-200">Treatment</td>
+                                        <td class="px-4 py-2 border-b border-gray-200">Test</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-2 border-b border-gray-200 bg-gray-100">2</td>
+                                        <td class="px-4 py-2 border-b border-gray-200 bg-gray-100">Test</td>
+                                        <td class="px-4 py-2 border-b border-gray-200 bg-gray-100">Control</td>
+                                        <td class="px-4 py-2 border-b border-gray-200 bg-gray-100">Test</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-2 border-b border-gray-200">3</td>
+                                        <td class="px-4 py-2 border-b border-gray-200">No test</td>
+                                        <td class="px-4 py-2 border-b border-gray-200">Treatment</td>
+                                        <td class="px-4 py-2 border-b border-gray-200">Test</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-2 border-b border-gray-200 bg-gray-100">4</td>
+                                        <td class="px-4 py-2 border-b border-gray-200 bg-gray-100">No test</td>
+                                        <td class="px-4 py-2 border-b border-gray-200 bg-gray-100">Control</td>
+                                        <td class="px-4 py-2 border-b border-gray-200 bg-gray-100">Test</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <p class="text-base leading-relaxed mb-4">
+                        The first two groups receive the evaluation test before and after the study, as in a normal two-group trial. The second two groups receive the evaluation only after the study. This design contains two extra control groups, which serve to reduce the influence of confounding variables and allow the researcher to test whether the pretest itself has an effect on the subjects.
+                    </p>
+                    <div class="bg-gray-50 rounded-lg p-4 border-l-4 border-[#ca6702]">
+                        <p class="text-sm font-semibold text-[#005f73] mb-2">Analysis:</p>
+                        <p class="text-sm italic leading-relaxed">
+                            The effectiveness of the treatment can be evaluated by comparisons between groups 1 and 3, and between groups 2 and 4. In addition, the effect of the pre-treatment evaluation can be calculated by comparing the control group who received the pre-treatment evaluation with those who did not (groups 2 and 4).
+                        </p>
+                    </div>
+                    <p class="text-base leading-relaxed mt-4">
+                        Whilst much more complex to set up and analyze, this design combats many of the internal validity issues that can plague research. It allows the researcher to exert complete control over the variables and allows the researcher to check that the pretest did not influence the results.
+                    </p>
+                    <div class="bg-white rounded-lg p-6 md:p-8 mt-8 border-2 border-[#9b2226]">
+                        <h4 class="text-lg font-bold text-[#ae2012] mb-4">Case Study: Resilience of Adolescents in a Tribal Area</h4>
+                        <div class="space-y-4 text-sm leading-relaxed">
+                            <div>
+                                <h5 class="font-bold text-[#005f73]">Rationale</h5>
+                                <p>Resilience prevents the emergence of stress-related mental health problems among adolescents. Adolescents in tribal areas of India are more prone to develop such problems.</p>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-[#005f73]">Objectives</h5>
+                                <p>The primary objective was to determine the effect of combined life skills-based health empowerment intervention on the resilience of school-going adolescents in a tribal area. Secondary objectives were to determine the effect of the intervention on internal health locus of control and self-determination, and to compare the effect of the intervention on resilience between non-tribal and tribal adolescents.</p>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-[#005f73]">Methods</h5>
+                                <p>Researchers conducted this quasi-experimental study using a Solomon four-group design among 742 adolescents in two schools in Purulia, West Bengal, India. Students in the pretested group were examined for resilience using the Child Youth Resilience Measurement scale. A life skills education-based health empowerment intervention was administered to students in the experimental group. Post-test data on resilience, self-determination, internal health locus of control, and pathological behavior was obtained 3 months after the completion of the intervention. A multi-level general linear mixed model was constructed to determine the effect of the intervention on resilience.</p>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-[#005f73]">Results</h5>
+                                <p>Resilience was lower among tribal adolescents at baseline. The intervention significantly improved resilience [$β_{Adjusted} = 11.19 (95\% CI = 10.55, 11.83)$], with a greater increase for tribal adolescents [$β_{tribal-nontribal} = 1.53 (95\% CI = 0.03, 3.03)$]. The intervention also significantly improved internal health locus of control (marginal mean increment $1.38 \pm 0.05$), self-determination (marginal mean increment $3.71 \pm 0.09$), and reduced pathological behavior of the adolescents.</p>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-[#005f73]">Conclusion</h5>
+                                <p>This study informed the current health policy that the existing life skills education-based program should be reviewed and modified to include generic life skills, and the life skills education-based program should be coupled with developmental interventions aimed at improving adult education and family climate for optimum effect on mental health and health behavior of adolescents.</p>
+                                <a href="https://www.sciencedirect.com/science/article/abs/pii/S0277953617303453" target="_blank" class="text-[#005f73] underline hover:text-[#0a9396] transition-colors">Source: ScienceDirect</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8 bg-white rounded-lg shadow-lg p-6 border-l-4 border-[#ca6702]">
+                        <h4 class="text-xl font-bold text-[#ae2012] mb-2">Limitations of Solomon Four-Group Design</h4>
+                        <p class="text-base leading-relaxed">
+                            The central drawbacks to the Solomon four-group design are its cost and feasibility—this design requires twice the number of participants, materials, and resources to implement.
+                        </p>
+                        <p class="text-base leading-relaxed mt-2">
+                            For example, in a traditional pretest-posttest study with random assignment to just two conditions, roughly 100 participants would be needed; however, because implementing a Solomon four-group design doubles the number of conditions to four, 200 would be needed.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+         <!-- New section for Quasi Experimental Designs -->
+        <div class="bg-white rounded-lg shadow-lg p-6 md:p-8">
+                <h3 class="text-2xl font-bold text-[#005f73] mb-4 flex items-center"><span class="text-3xl mr-3">3️⃣</span>Quasi-Experimental Designs</h3>
+                <div class="space-y-4 text-base">
+                     <p class="text-base leading-relaxed mb-4">
+                    Quasi-experimental designs are similar to true experiments, but they lack random assignment to experimental and control groups. Quasi-experimental designs have a comparison group that is similar to a control group except assignment to the comparison group is not determined by random assignment. The most basic of these quasi-experimental designs is the nonequivalent comparison groups design.
+                </p>
+                <div class="bg-gray-50 rounded-lg p-4 border-l-4 border-[#ca6702] mb-4">
+                    <p class="text-sm italic leading-relaxed">
+                        A quasi-experiment is an empirical interventional study used to estimate the causal impact of an intervention on a target population without random assignment.
+                    </p>
+                </div>
+                <div class="mt-8 bg-gray-50 rounded-lg p-4 border-l-4 border-[#ee9b00]">
+                    <h3 class="text-lg font-bold text-[#ee9b00] mb-2">Characteristics of Quasi-Experimental Designs</h3>
+                    <ul class="list-disc pl-5 space-y-1 text-sm leading-relaxed">
+                        <li>No Random Assignment: Participants are not randomly assigned to the experimental or control groups.</li>
+                        <li>Comparison Group: They use a pre-existing group or a non-randomly assigned comparison group instead of a true control group.</li>
+                        <li>Manipulation of Variables: The researcher still manipulates the independent variable, but without the control offered by randomization.</li>
+                        <li>Higher External Validity: Because they are often conducted in real-world or natural settings, the findings can be more easily generalized to other contexts.</li>
+                    </ul>
+                </div>
+                <p class="text-base leading-relaxed mb-4">
+                    "Quasi" indicates "partial," "half," or "pseudo." As a result, quasi-experimental research resembles, but is not the same as, actual experimental research. In a true experimental design, the participants of the group are randomly assigned. So, every unit has an equal chance of getting into the experimental group. In a quasi-experimental design, the participants of the groups are not randomly assigned. So, the researcher cannot make a cause-and-effect conclusion.
+                </p>
+                <p class="text-base leading-relaxed">
+                    Thus, it is not possible to assign the participants to the group. Because participants in quasi-experiments are not assigned at random, they are applied in cases where randomization is difficult or impossible. This is prevalent in educational research, as administrators are hesitant to allow students to be chosen at random for experimental samples. Time series, no corresponding control group, and counterbalanced designs are all instances of quasi-experimental research designs.
+                </p>
+            </div>
+        </section>
+
+        <div class="w-full h-px bg-[#0a9396] my-12"></div>
+        <section id="purpose-fields" class="mb-12">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-[#005f73]">Purpose and Fields of Experimental Research</h2>
+                <p class="text-md text-[#0a9396] mt-1">Understanding the broad applications of this methodology.</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-6 md:p-8">
+                <p class="text-base leading-relaxed mb-4">
+                    The purpose of research design is to determine the explanations for the causes and effects of a precisely defined problem. An explanation of the link between variables is the main goal of this kind of research. The statistical method used to understand the link between the study's many characteristics is known as correlational research. Experimental research is the most common type of research design for people working in the sciences and a variety of other fields.
+                </p>
+                <p class="text-base leading-relaxed font-bold text-[#005f73]">Some major uses of experimental research design include:</p>
+                <ul class="list-none space-y-4 mt-4">
+                    <li class="flex items-start">
+                        <span class="text-2xl text-[#ae2012] mr-3">💊</span>
+                        <div>
+                            <h3 class="font-bold text-lg text-[#0a9396]">Medicine</h3>
+                            <p class="text-sm leading-relaxed">
+                                Experimental research is utilized to develop effective treatments for diseases. Rather than directly employing patients as study subjects, researchers typically collect a sample of bacteria from the patient's body and treat it with the created antibiotic.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-2xl text-[#9b2226] mr-3">🎓</span>
+                        <div>
+                            <h3 class="font-bold text-lg text-[#0a9396]">Education</h3>
+                            <p class="text-sm leading-relaxed">
+                                Aside from teaching students how to do experimental research in science areas like Chemistry and Physics, it may also be utilized to improve the level of an academic institution. This involves measuring students' understanding of various topics, developing better teaching techniques, and adopting additional initiatives to help pupils learn.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-2xl text-[#ee9b00] mr-3">👥</span>
+                        <div>
+                            <h3 class="font-bold text-lg text-[#0a9396]">Human Behavior</h3>
+                            <p class="text-sm leading-relaxed">
+                                Experimental research is mostly used by social scientists to evaluate human behavior. Consider two persons who were picked at random to be the subjects of a social interaction study, one of whom was confined in a room with no human interaction for a year.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-2xl text-[#0a9396] mr-3">🧪</span>
+                        <div>
+                            <h3 class="font-bold text-lg text-[#0a9396]">Other Uses</h3>
+                            <p class="text-sm leading-relaxed">
+                                Other known uses of experimental research are the Evaluation of physical structures, materials, and components, Chemical formulations, Computer programs, Opinion polls, Natural experiments, Statistical surveys, etc.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+                <p class="text-base leading-relaxed mt-4 italic">
+                    This method of research allows for the replication of certain environmental situations inside the confines of a laboratory setting. This framework allows the studies to repeat factors that would otherwise need a large time commitment. It is a procedure that allows the researchers engaged to exert great control over the extraneous factors that may arise, hence limiting the unpredictability of unknown or unexpected aspects when pushing toward the outcome.
+                </p>
+            </div>
+        </section>
+
+
+    </main>
+
+</body>
+</html>
+
